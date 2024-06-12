@@ -1,0 +1,79 @@
+.container {
+  perspective: 150vmin;
+  width: 62vw;
+  height: 97vh;
+  position: relative;
+  bottom:0%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display:flex;
+  justify-content: center;
+  align-items: flex-end;
+  transform-style: preserve-3d;
+  /*animation: rotateCube 5s infinite linear;*/
+}
+
+.cube2 {
+  left:60%;
+}
+
+.face {
+  position: absolute;
+  width: 20vmin;
+  height: 40vmin;
+  background-color: rgba(121, 164, 121, 0.7);
+  border: 1vmin solid #000000;
+}
+
+.top {
+  height: 20vmin;
+  top:65vmin;
+}
+
+.bottom {
+  height: 20vmin;
+  top: 66vmin;
+}
+.circul {
+  perspective: 150vmin;
+  width: 20vmin;
+  height: 20vmin;
+  border-radius: 50%;
+  border: 1vmin solid #000;
+  background: rgba(121, 164, 121, 0.7);
+  transform-style: preserve-3d;
+  transform: translate(-50% -50%);
+}
+.face:nth-child(1) {
+  transform: translateZ(10vmin);
+}
+.face:nth-child(2) {
+  transform: rotateY(90deg) translateZ(10vmin);
+}
+.face:nth-child(3) {
+  transform: rotateY(180deg) translateZ(10vmin);
+}
+.face:nth-child(4) {
+  transform: rotateY(-90deg) translateZ(10vmin);
+}
+.face:nth-child(5) {
+  transform: rotateX(90deg) translateZ(20vmin);
+}
+.face:nth-child(6) {
+  transform: rotateX(-90deg) translateZ(20vmin);
+}
+
+@keyframes rotateCube {
+  from {
+    transform: rotateX(0) rotateY(0);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}

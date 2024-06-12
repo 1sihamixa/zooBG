@@ -1,0 +1,15 @@
+.siham {
+    position:relative;
+    width: 20vmin;
+    height: 40vmin;
+    perspective: 100vmin;
+    background: #000;
+    margin-left: 15vmin;
+}
+.s {
+    position: absolute;
+    background: red;
+    transform-style: preserve-3d;
+    transform:rotateX(45deg);
+    padding: 15vmin;
+}
